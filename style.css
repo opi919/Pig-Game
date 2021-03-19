@@ -1,0 +1,169 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+.clearfix::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+body{
+    font-family: 'Syne Mono',sans-serif;
+    font-weight: 200;
+    height: 100vh;
+    color: #333;
+    background-image: radial-gradient(#753682 0%, #bf2e34 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main{
+    position: relative;
+    width: 100rem;
+    height: 60rem;
+    background-color: rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur();
+    box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.8);
+    display: flex;
+    border-radius: 2rem;
+    backface-visibility: hidden;
+    overflow: hidden;
+}
+
+
+.player{
+    flex: 50%;
+    display: flex;
+    flex-direction: column;
+    padding: 9rem;
+    align-items: center;
+    transition: all 1s;
+}
+
+.name{
+    position: relative;
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    opacity: 0.5;
+    transition: all 1s;
+}
+
+.score{
+    font-size: 4rem;
+    color: #c7365f;
+    margin-bottom: 22rem;
+}
+
+.current {
+    background-color: #c7365f;
+    opacity: 0.5;
+    border-radius: 9px;
+    color: #fff;
+    width: 65%;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.75s;
+    padding: 2rem 1.5rem;
+    transition: all .5s;
+  }
+
+  .current-label{
+      font-size: 1.7rem;
+      text-transform: uppercase;
+  }
+
+  .current-score{
+      font-size: 3rem;
+  }
+
+  .active{
+      background-color:rgba(255, 255, 255, 0.4);
+  }
+
+  .active .name{
+      font-weight: 700;
+      opacity: 1;
+  }
+  .active .score{
+      font-weight: 700;
+  }
+  .active .current{
+      opacity: 1;
+  }
+    
+  .btn{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 1rem 1.5rem;
+    text-transform: uppercase;
+    backdrop-filter: blur(16px);
+    border: none;
+    border-radius: 100px;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: 400;
+    font-family: 'Syne Mono';
+    box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.3);
+    transition: all .5s;
+  }
+
+  .btn-new {
+    top: 4rem;
+  }
+
+  .btn-roll{
+      top: 41rem;
+  }
+
+  .btn-hold{
+      top: 48rem;
+  }
+
+  .btn:focus{
+      outline: none;
+  }
+
+  .btn:active{
+      transform: translate(-50%,-10px);
+      box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.4);
+  }
+
+  .img{
+      height: 5rem;
+      width: 5rem;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 25rem;
+  }
+  .winner {
+    background-color: #2f2f2f;
+  }
+
+  .winner .name {
+    font-weight: 700;
+    color: #c7365f;
+  }
+
+  .winner .current{
+      opacity: 1;
+  }
+  
+  .hidden {
+    display: none;
+  }
