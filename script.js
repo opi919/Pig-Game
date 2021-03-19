@@ -65,7 +65,7 @@ var scores,roundScore,activePlayer,dice,gamePlay,diceSix,input;
         scores[activePlayer]+=roundScore;
         document.querySelector('#score-'+activePlayer).textContent=scores[activePlayer];
    
-        if(scores[activePlayer]>=input){
+        if(scores[activePlayer]>=50){
            document.querySelector('.player-'+activePlayer).classList.add('winner');
            document.querySelector('#name-'+activePlayer).textContent='WINNER!';
            document.querySelector('#name-'+activePlayer).style.color='green';
